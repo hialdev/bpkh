@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="assets/css/main/app-dark.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
-    
-    <link rel="stylesheet" href="assets/css/shared/iconly.css">
-    
+    <link rel="stylesheet" href="assets/extensions/choices.js/public/assets/styles/choices.css"> <!-- Choices -->
+
+<link rel="stylesheet" href="assets/css/shared/iconly.css">
+
 </head>
 
 <body>
@@ -204,83 +205,133 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
-                        <li class="breadcrumb-item"><a href="pengajuan.html">Pengajuan</a></li>
-                        <li class="breadcrumb-item active">Tolak : SISKOHAT Kemenag | Diskusi SISKEHAT - SISKOHAT</li>
+                        <li class="breadcrumb-item"><a href="pengajuanku.html">Pengajuan Saya</i></a></li>
+                        <li class="breadcrumb-item active">Edit : {Tujuan | Keterangan}</li>
                     </ol>
                 </nav>
+                <div class="page-heading">
+                    <h3>Edit Pengajuan</h3>
+                </div>
                 <div class="page-content">
                     <section class="row">
                         <div class="col-12">
-                            <div class="card mb-3">
+                            <div class="card">
                                 <div class="card-body">
-                                    <h4>ID : 0003b0bb-ed1d-11ec-8e96-005056bababd</h4>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-person-circle mb-2"></i>
-                                        priyatmoko.nugroho
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-start mb-3">
-                                        <i class="bi bi-calendar-week-fill mb-2"></i>
-                                        <span>Kam, 28/07/22 09:42 - Kam, 28/07/22 18:59</span>
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-pin-map-fill mb-2"></i>
-                                        Antar Jemput - SISKOHAT Kemenag
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-file-text-fill mb-2"></i>
-                                        Diskusi SISKEHAT - SISKOHAT
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-start mb-3">
-                                        <i class="bi bi-people-fill mb-2"></i>
-                                        <div>
-                                            <span class="badge bg-light-primary">Joko Kendil</span>
-                                            <span class="badge bg-light-primary">Hamam</span>
-                                            <span class="badge bg-light-primary">Harrys</span>
+                                    <form class="form form-vertical">
+                                        <div class="form-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="jenis">Jenis Peminjaman</label>
+                                                        <select class="form-select" id="jenis">
+                                                            <option value="antar">Antar</option>
+                                                            <option value="menjemput">Menjemput</option>
+                                                            <option value="antar-jemput">Antar Jemput</option>
+                                                            <option value="menunggu">Menunggu</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="tujuan">Tujuan</label>
+                                                        <input type="text" id="tujuan" class="form-control"
+                                                            name="fname" placeholder="Dari dan Mau kemana">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="keterangan">Keterangan</label>
+                                                        <input type="text" id="keterangan" class="form-control"
+                                                            name="fname" placeholder="Urusan">
+                                                    </div>
+                                                </div>
+
+                                                <h6 class="mt-3">Waktu Peminjaman</h6>
+                                                <div class="col-12">
+                                                    <!-- Antar -->
+                                                    <div class="row datepick" id="antar">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_start">Antar/Berangkat</label>
+                                                                <input type="datetime-local" id="date_start" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Antar Jemput -->
+                                                    <div class="row datepick" id="antar-jemput">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_start">Antar/Berangkat</label>
+                                                                <input type="datetime-local" id="date_start" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_end">Jemput/Pulang</label>
+                                                                <input type="datetime-local" id="date_end" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Menjemput -->
+                                                    <div class="row datepick" id="menjemput">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_start">Jemput/Pulang</label>
+                                                                <input type="datetime-local" id="date_start" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Menunggu -->
+                                                    <div class="row datepick" id="menunggu">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_start">Mulai/Berangkat</label>
+                                                                <input type="datetime-local" id="date_start" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="date_end">Selesai/Pulang</label>
+                                                                <input type="datetime-local" id="date_end" class="form-control"
+                                                                    name="contact">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="">Penumpang</label>
+                                                    <div class="form-group">
+                                                        <select class="choices form-select multiple-remove" multiple="multiple">
+                                                            <optgroup label="Figures">
+                                                                <option value="romboid">Romboid</option>
+                                                                <option value="trapeze" selected>Trapeze</option>
+                                                                <option value="triangle">Triangle</option>
+                                                                <option value="polygon">Polygon</option>
+                                                            </optgroup>
+                                                            <optgroup label="Colors">
+                                                                <option value="red">Red</option>
+                                                                <option value="green">Green</option>
+                                                                <option value="blue" selected>Blue</option>
+                                                                <option value="purple">Purple</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <label for="lampiran">Lampiran</label>
+                                                    <input type="file" name="lampiran" id="lampiran" class="form-control">
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-file-earmark-richtext-fill mb-2"></i>
-                                        <a href=""><span class="badge bg-primary">lampiran.pdf</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="mb-3">Alasan Penolakan</h4>
-                                    <form action="">
-                                        <textarea name="alasan" id="alasan" cols="30" rows="10" class="form-control"></textarea>
                                     </form>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal"
-                                data-bs-target="#danger">Tolak</button>
-                                <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
-                                    aria-labelledby="myModalLabel120" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-                                        role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header bg-danger">
-                                                <h5 class="modal-title white" id="myModalLabel120">Yakin Tolak Pengajuan ?
-                                                </h5>
-                                            </div>
-                                            <div class="modal-body">
-                                                Pengajuan yang telah ditolak tidak dapat dipulihkan, apabila ingin megajukan hal yang sama maka diharuskan membuat pengajuan yang baru.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light-secondary"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-x"></i>
-                                                    <span>Batal</span>
-                                                </button>
-                                                <button type="submit" class="btn btn-danger ml-1"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-check"></i>
-                                                    <span>Ya, Tolak</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -305,6 +356,9 @@
         </div>
     </div>
 
+<script src="assets/extensions/choices.js/public/assets/scripts/choices.js"></script> <!-- Choices -->
+<script src="assets/js/pages/form-element-select.js"></script>
+<script src="assets/extensions/jquery/jquery.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/pages/horizontal-layout.js"></script>
@@ -313,6 +367,17 @@
 <script src="assets/js/pages/dashboard.js"></script>
 
 
+<script>
+    $(function() {
+        $('.datepick').hide();
+        $('#antar').show();
+        $('#jenis').change(function(){
+            $('.datepick').hide(); 
+            let id = $(this).val();
+            $('#'+id).show();
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -207,22 +207,29 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
-                        <li class="breadcrumb-item active">Pengajuan</li>
+                        <li class="breadcrumb-item active">Pengajuan Saya</li>
                     </ol>
                 </nav>
                 <div class="page-heading">
-                    <h3>Persetujuan Pengajuan</h3>
+                    <h3>Pengajuan Saya</h3>
                 </div>
                 <div class="page-content">
 
                     <section class="section">
                         <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center justify-content-end gap-3">
+                                    <div><span class="badge p-2 bg-primary text-primary me-2"> </span>Selesai</div>
+                                    <div><span class="badge p-2 bg-secondary text-secondary me-2"> </span>Diajukan</div>
+                                    <div><span class="badge p-2 bg-danger text-danger me-2"> </span>Ditolak / dibatalkan</div>
+                                    <div><span class="badge p-2 bg-success text-success me-2"> </span>Disetujui</div>
+                                </div>
+                            </div>
                             <div class="card-body">
                                 <table class="table table-striped" id="table1">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th><i class="bi bi-person-circle"></i></th>
                                             <th>Jenis</th>
                                             <th>Waktu Pakai</th>
                                             <th>Tujuan</th>
@@ -231,8 +238,8 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-primary">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -240,54 +247,36 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
-                                                        </div>
-                                                        <!--Danger theme Modal -->
-                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
-                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-                                                                role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header bg-danger">
-                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
-                                                                        </h5>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-light-secondary"
-                                                                            data-bs-dismiss="modal">
-                                                                            <span>Batal</span>
-                                                                        </button>
-                                                                        <button type="button" class="btn btn-danger ml-1"
-                                                                            data-bs-dismiss="modal">
-                                                                            <span>Ya, Hapus</span>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <a class="dropdown-item" href="pengajuan_lihat.html"><span class="dropdown-item-emoji">🧐</span>
+                                                                Lihat</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-danger">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -295,54 +284,36 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
-                                                        </div>
-                                                        <!--Danger theme Modal -->
-                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
-                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-                                                                role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header bg-danger">
-                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
-                                                                        </h5>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-light-secondary"
-                                                                            data-bs-dismiss="modal">
-                                                                            <span>Batal</span>
-                                                                        </button>
-                                                                        <button type="button" class="btn btn-danger ml-1"
-                                                                            data-bs-dismiss="modal">
-                                                                            <span>Ya, Hapus</span>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <a class="dropdown-item" href="pengajuan_lihat.html"><span class="dropdown-item-emoji">🧐</span>
+                                                                Lihat</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-success">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -350,14 +321,11 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="pengajuan_selesai.html"><span class="dropdown-item-emoji">🥰</span>
+                                                                Selesai</a>
                                                             <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😩</span>
+                                                                Batalkan</a>
                                                         </div>
                                                         <!--Danger theme Modal -->
                                                         <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
@@ -370,7 +338,7 @@
                                                                         </h5>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dibatalkan, pengajuan yang telah batal tidak dapat dikembalikan. Apabila ingin mengajukan pinjaman yang sama maka harus dibuat ulang
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-light-secondary"
@@ -379,7 +347,7 @@
                                                                         </button>
                                                                         <button type="button" class="btn btn-danger ml-1"
                                                                             data-bs-dismiss="modal">
-                                                                            <span>Ya, Hapus</span>
+                                                                            <span>Ya, Batalkan</span>
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -388,16 +356,30 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-secondary">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -405,14 +387,11 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="pengajuan_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit</a>
                                                             <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😩</span>
+                                                                Batalkan</a>
                                                         </div>
                                                         <!--Danger theme Modal -->
                                                         <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
@@ -443,16 +422,30 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-secondary">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -460,14 +453,11 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="pengajuan_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit</a>
                                                             <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😩</span>
+                                                                Batalkan</a>
                                                         </div>
                                                         <!--Danger theme Modal -->
                                                         <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
@@ -498,16 +488,30 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="btn-group mb-1">
+                                            <td class=" border-start border-5 border-secondary">
+                                                <div class="btn-group mb-1s">
                                                     <div class="dropdown dropdown-color-icon">
                                                         <button class="btn p-0 btn-primary" type="button"
                                                             id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -515,14 +519,11 @@
                                                             <i class="bi bi-three-dots-vertical"></i>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
-                                                            <a class="dropdown-item" href="pengajuan_setuju.html"><span class="dropdown-item-emoji">🤩</span>
-                                                                Setujui</a>
-                                                            <a class="dropdown-item" href="pengajuan_tolak.html"><span class="dropdown-item-emoji">😪</span>
-                                                                Tolak </a>
-                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="pengajuan_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit</a>
                                                             <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
-                                                                Hapus</a>
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😩</span>
+                                                                Batalkan</a>
                                                         </div>
                                                         <!--Danger theme Modal -->
                                                         <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
@@ -553,9 +554,89 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>alifia.nugrahania</td>
-                                            <td>antar-jemput</td>
-                                            <td>2022-11-25 05:30:00 s/d 2022-11-25 23:00:00</td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
+                                            <td>rumah-cianjur-PP</td>
+                                            <td>Agenda Kemaslahatan</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td class=" border-start border-5 border-secondary">
+                                                <div class="btn-group mb-1s">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengajuan_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😩</span>
+                                                                Batalkan</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>antar-jemput</div>
+                                                <small>Kam, 22/12/22 16:23</small>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3 border-bottom mb-2">
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-person-badge mb-2"></i>
+                                                        Hakiki Fajar - 087881134103
+                                                    </div>
+                                                    <div class="d-flex gap-2 align-items-center mb-3">
+                                                        <i class="bi bi-car-front-fill mb-2"></i>
+                                                        B 2349 UOV - Suprio
+                                                    </div>
+                                                </div>
+                                                Kam, 22/12/22 09:23 - Kam, 22/12/22 21:23
+                                            </td>
                                             <td>rumah-cianjur-PP</td>
                                             <td>Agenda Kemaslahatan</td>
                                             

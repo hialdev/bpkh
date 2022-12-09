@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="assets/css/main/app-dark.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
-    
+
     <link rel="stylesheet" href="assets/css/shared/iconly.css">
-    
+
+    <link rel="stylesheet" href="assets/extensions/simple-datatables/style.css">
+    <link rel="stylesheet" href="assets/css/pages/simple-datatables.css">
+
 </head>
 
 <body>
@@ -204,86 +207,75 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
-                        <li class="breadcrumb-item"><a href="pengajuan.html">Pengajuan</a></li>
-                        <li class="breadcrumb-item active">Tolak : SISKOHAT Kemenag | Diskusi SISKEHAT - SISKOHAT</li>
+                        <li class="breadcrumb-item"><a href="pengemudi.html">Pengemudi</a></li>
+                        <li class="breadcrumb-item active">Tambah Baru</li>
                     </ol>
                 </nav>
+                <div class="page-heading d-flex gap-3 align-items-center">
+                    <h3>Tambah Pengemudi</h3>
+                </div>
                 <div class="page-content">
-                    <section class="row">
-                        <div class="col-12">
-                            <div class="card mb-3">
+
+                    <section class="section">
+                        <div class="card">
+                            <form action="">
                                 <div class="card-body">
-                                    <h4>ID : 0003b0bb-ed1d-11ec-8e96-005056bababd</h4>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-person-circle mb-2"></i>
-                                        priyatmoko.nugroho
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-start mb-3">
-                                        <i class="bi bi-calendar-week-fill mb-2"></i>
-                                        <span>Kam, 28/07/22 09:42 - Kam, 28/07/22 18:59</span>
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-pin-map-fill mb-2"></i>
-                                        Antar Jemput - SISKOHAT Kemenag
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-file-text-fill mb-2"></i>
-                                        Diskusi SISKEHAT - SISKOHAT
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-start mb-3">
-                                        <i class="bi bi-people-fill mb-2"></i>
-                                        <div>
-                                            <span class="badge bg-light-primary">Joko Kendil</span>
-                                            <span class="badge bg-light-primary">Hamam</span>
-                                            <span class="badge bg-light-primary">Harrys</span>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="">NIP</label>
+                                                <input type="text" class="form-control" placeholder="NIP" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex gap-2 align-items-center mb-3">
-                                        <i class="bi bi-file-earmark-richtext-fill mb-2"></i>
-                                        <a href=""><span class="badge bg-primary">lampiran.pdf</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="mb-3">Alasan Penolakan</h4>
-                                    <form action="">
-                                        <textarea name="alasan" id="alasan" cols="30" rows="10" class="form-control"></textarea>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal"
-                                data-bs-target="#danger">Tolak</button>
-                                <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
-                                    aria-labelledby="myModalLabel120" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-                                        role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header bg-danger">
-                                                <h5 class="modal-title white" id="myModalLabel120">Yakin Tolak Pengajuan ?
-                                                </h5>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Nama Lengkap</label>
+                                                <input type="text" class="form-control" placeholder="Nama" minlength="4" required>
                                             </div>
-                                            <div class="modal-body">
-                                                Pengajuan yang telah ditolak tidak dapat dipulihkan, apabila ingin megajukan hal yang sama maka diharuskan membuat pengajuan yang baru.
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Email</label>
+                                                <input type="email" class="form-control" placeholder="Email" minlength="10" required>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light-secondary"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-x"></i>
-                                                    <span>Batal</span>
-                                                </button>
-                                                <button type="submit" class="btn btn-danger ml-1"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-check"></i>
-                                                    <span>Ya, Tolak</span>
-                                                </button>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="">No WA/HP</label>
+                                                <input type="number" class="form-control" placeholder="6282xxxxxxxxx" minlength="11" maxlength="13" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group"><label>Status</label></div>
+                                            <div class="form-group d-flex align-items-center gap-2 flex-wrap gap-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="radio" name="status" value="0" class="form-check-input" checked>
+                                                    <span class="badge bg-light-primary">Tersedia</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="radio" name="status" value="1" class="form-check-input">
+                                                    <span class="badge bg-light-success">Tugas</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="radio" name="status" value="2" class="form-check-input">
+                                                    <span class="badge bg-light-warning">Sakit</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="radio" name="status" value="3" class="form-check-input">
+                                                    <span class="badge bg-light-secondary">Cuti</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="radio" name="status" value="4" class="form-check-input">
+                                                    <span class="badge bg-light-danger">Inactive</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <button type="submit" class="btn btn-primary w-100">Tambah</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
+                
                     </section>
                 </div>
 
@@ -305,6 +297,7 @@
         </div>
     </div>
 
+<script src="assets/extensions/jquery/jquery.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/pages/horizontal-layout.js"></script>
@@ -312,6 +305,8 @@
 <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
 <script src="assets/js/pages/dashboard.js"></script>
 
+<script src="assets/extensions/simple-datatables/umd/simple-datatables.js"></script>
+<script src="assets/js/pages/simple-datatables.js"></script>
 
 </body>
 

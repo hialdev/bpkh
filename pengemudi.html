@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPKH - Pinjam Pakai Kendaraan</title>
+    
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="assets/css/shared/iconly.css">
+
+    <link rel="stylesheet" href="assets/extensions/simple-datatables/style.css">
+    <link rel="stylesheet" href="assets/css/pages/simple-datatables.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="main" class="layout-horizontal">
+            <header class="mb-5">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" style="min-height: 2.5em;"></a>
+                        </div>
+                        <div class="header-top-right">
+                            
+                            <div class="dropdown">
+                                <a href="#" id="topbarUserDropdown" class="user-dropdown d-flex align-items-center dropend dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="avatar avatar-md2" >
+                                        <img src="assets/images/faces/1.jpg" alt="Avatar">
+                                    </div>
+                                    <div class="text d-none d-sm-block">
+                                        <h6 class="user-dropdown-name">John Ducky</h6>
+                                        <p class="user-dropdown-status text-sm text-muted">Member</p>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="topbarUserDropdown">
+                                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="auth-login.html">Logout</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Burger button responsive -->
+                            <a href="#" class="burger-btn d-block d-xl-none">
+                                <i class="bi bi-justify fs-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="main-navbar">
+                    <div class="container">
+                        <ul>
+                            
+                            
+                            
+                            <li
+                                class="menu-item  ">
+                                <a href="index.html" class='menu-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            
+                            <li
+                                class="menu-item  ">
+                                <a href="pinjam.html" class='menu-link'>
+                                    <i class="bi bi-clipboard-plus-fill"></i>
+                                    <span>Pinjam</span>
+                                </a>
+                            </li>
+                            
+                            <li
+                                class="menu-item active has-sub">
+                                <a href="#" class='menu-link'>
+                                    <i class="bi bi-person-badge-fill"></i>
+                                    <span>Administrator</span>
+                                </a>
+                                <div
+                                    class="submenu ">
+                                    <!-- Wrap to submenu-group-wrapper if you want 3-level submenu. Otherwise remove it. -->
+                                    <div class="submenu-group-wrapper">
+                                        
+                                        
+                                        <ul class="submenu-group">
+                                            
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="pengajuan.html"
+                                                    class='submenu-link'>Pengajuan</a>
+
+                                                
+                                            </li>
+                                            
+                                        
+                                        
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="kendaraan.html"
+                                                    class='submenu-link'>Kendaraan</a>
+
+                                                
+                                            </li>
+                                            
+                                        
+                                        
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="pengemudi.html"
+                                                    class='submenu-link'>Pengemudi</a>
+
+                                                
+                                            </li>
+                                            
+                                        
+                                        
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="pengguna.html"
+                                                    class='submenu-link'>Pengguna</a>
+
+                                                
+                                            </li>
+                                            
+                                        
+                                        
+                                            <li
+                                                class="submenu-item active ">
+                                                <a href="laporan.html"
+                                                    class='submenu-link'>Laporan</a>
+
+                                                
+                                            </li>
+                                            
+                                        </ul>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li
+                                class="menu-item active has-sub">
+                                <a href="#" class='menu-link'>
+                                    <i class="bi bi-person-badge-fill"></i>
+                                    <span>Super Admin</span>
+                                </a>
+                                <div
+                                    class="submenu ">
+                                    <!-- Wrap to submenu-group-wrapper if you want 3-level submenu. Otherwise remove it. -->
+                                    <div class="submenu-group-wrapper">
+                                        
+                                        
+                                        <ul class="submenu-group">
+                                            
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="unit.html"
+                                                    class='submenu-link'>Unit</a>
+
+                                                
+                                            </li>
+                                            
+                                        
+                                        
+                                            <li
+                                                class="submenu-item  ">
+                                                <a href="pengguna.html"
+                                                    class='submenu-link'>Pengguna</a>
+
+                                                
+                                            </li>
+                                            
+                                        </ul>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </header>
+
+            <div class="d-flex justify-content-center">
+                <div class="rounded-pill card p-2 mb-2 position-fixed bottom-0" style="z-index: 999;">
+                    <div class="theme-toggle d-flex gap-2 align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path><g transform="translate(-210 -1)"><path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path><circle cx="220.5" cy="11.5" r="4"></circle><path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path></g></g></svg>
+                        <div class="form-check form-switch fs-6">
+                            <input class="form-check-input  me-0" type="checkbox" id="toggle-dark" >
+                            <label class="form-check-label" ></label>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
+                        <li class="breadcrumb-item active">Pengemudi</li>
+                    </ol>
+                </nav>
+                <div class="page-heading d-flex gap-3 align-items-center">
+                    <h3>Pengemudi</h3>
+                    <a href="pengemudi_add.html" class="btn btn-primary fw-bold">+</a>
+                </div>
+                <div class="page-content">
+
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-striped" id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>NIP</th>
+                                            <th><i class="bi bi-person-circle"></i></th>
+                                            <th>Contact</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group mb-1">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">😃</span>
+                                                                Tersedia </a>
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">😷</span>
+                                                                Sakit </a>
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">😴</span>
+                                                                Cuti </a>
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">😶</span>
+                                                                Inactive </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
+                                                                Hapus</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>123456782</td>
+                                            <td>Joko Kendil</td>
+                                            <td>hakikifajar85@gmail.com - 08971234244</td>
+                                            <td><span class="badge bg-light-primary">Tersedia</span></td>                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group mb-1">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
+                                                                Hapus</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>123456782</td>
+                                            <td>Joko Kendil</td>
+                                            <td>hakikifajar85@gmail.com - 08971234244</td>
+                                            <td><span class="badge bg-light-warning">Sakit</span></td>                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group mb-1">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
+                                                                Hapus</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>123456782</td>
+                                            <td>Joko Kendil</td>
+                                            <td>hakikifajar85@gmail.com - 08971234244</td>
+                                            <td><span class="badge bg-light-success">Tugas</span></td>                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group mb-1">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
+                                                                Hapus</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>123456782</td>
+                                            <td>Joko Kendil</td>
+                                            <td>hakikifajar85@gmail.com - 08971234244</td>
+                                            <td><span class="badge bg-light-danger">Inactive</span></td>                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group mb-1">
+                                                    <div class="dropdown dropdown-color-icon">
+                                                        <button class="btn p-0 btn-primary" type="button"
+                                                            id="dropdownMenuButtonEmoji" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmoji">
+                                                            <a class="dropdown-item" href="pengemudi_edit.html"><span class="dropdown-item-emoji">🤔</span>
+                                                                Edit </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#danger"><span class="dropdown-item-emoji">😵</span>
+                                                                Hapus</a>
+                                                        </div>
+                                                        <!--Danger theme Modal -->
+                                                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel120" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                                                                role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header bg-danger">
+                                                                        <h5 class="modal-title white" id="myModalLabel120">Yakin Ingin Menghapus?
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Pengajuan Pinjaman {nama pinjaman} akan dihapus secara permanen dari database
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-light-secondary"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Batal</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger ml-1"
+                                                                            data-bs-dismiss="modal">
+                                                                            <span>Ya, Hapus</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>123456782</td>
+                                            <td>Joko Kendil</td>
+                                            <td>hakikifajar85@gmail.com - 08971234244</td>
+                                            <td><span class="badge bg-light-secondary">Cuti</span></td>                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                
+                    </section>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="container">
+                    <div class="footer clearfix mb-0 text-muted">
+                        <div class="float-start">
+                            <p>2022 &copy; Badan Pengelola Keuangan Haji</p>
+                        </div>
+                        <div class="float-end">
+                            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="https://hialdev.github.io">I am Alif</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<script src="assets/extensions/jquery/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/horizontal-layout.js"></script>
+<script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/js/pages/dashboard.js"></script>
+
+<script src="assets/extensions/simple-datatables/umd/simple-datatables.js"></script>
+<script src="assets/js/pages/simple-datatables.js"></script>
+
+</body>
+
+</html>

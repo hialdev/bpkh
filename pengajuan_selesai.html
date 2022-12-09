@@ -205,7 +205,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
                         <li class="breadcrumb-item"><a href="pengajuan.html">Pengajuan</a></li>
-                        <li class="breadcrumb-item active">Tolak : SISKOHAT Kemenag | Diskusi SISKEHAT - SISKOHAT</li>
+                        <li class="breadcrumb-item active">Setujui : SISKOHAT Kemenag | Diskusi SISKEHAT - SISKOHAT</li>
                     </ol>
                 </nav>
                 <div class="page-content">
@@ -230,6 +230,16 @@
                                         <i class="bi bi-file-text-fill mb-2"></i>
                                         Diskusi SISKEHAT - SISKOHAT
                                     </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="d-flex gap-2 align-items-center mb-3">
+                                            <i class="bi bi-person-badge mb-2"></i>
+                                            Hakiki Fajar - 087881134103
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center mb-3">
+                                            <i class="bi bi-car-front-fill mb-2"></i>
+                                            B 2349 UOV - Suprio
+                                        </div>
+                                    </div>
                                     <div class="d-flex gap-2 align-items-start mb-3">
                                         <i class="bi bi-people-fill mb-2"></i>
                                         <div>
@@ -246,42 +256,32 @@
                             </div>
                             <div class="card mb-3">
                                 <div class="card-body">
-                                    <h4 class="mb-3">Alasan Penolakan</h4>
+                                    <h4 class="mb-3">Tanda tangani</h4>
                                     <form action="">
-                                        <textarea name="alasan" id="alasan" cols="30" rows="10" class="form-control"></textarea>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pengemudi" class="form-label">Tanda Tangan</label>
+                                                    <div>
+                                                        <canvas id="sign" class="border rounded"></canvas>
+                                                    </div>
+                                                    <button class="btn btn-light" type="button" onclick="signaturePad.clear();">bersihkan</button>
+                                                    <textarea name="sign" id="input-sign" class="d-none"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="sign-file" class="form-label">Upload E-sign</label>
+                                                    <input type="file" name="sign-file" id="sign-file" class="form-control">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
                                     </form>
                                 </div>
                             </div>
                             <div class="mb-5">
-                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal"
-                                data-bs-target="#danger">Tolak</button>
-                                <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog"
-                                    aria-labelledby="myModalLabel120" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-                                        role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header bg-danger">
-                                                <h5 class="modal-title white" id="myModalLabel120">Yakin Tolak Pengajuan ?
-                                                </h5>
-                                            </div>
-                                            <div class="modal-body">
-                                                Pengajuan yang telah ditolak tidak dapat dipulihkan, apabila ingin megajukan hal yang sama maka diharuskan membuat pengajuan yang baru.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light-secondary"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-x"></i>
-                                                    <span>Batal</span>
-                                                </button>
-                                                <button type="submit" class="btn btn-danger ml-1"
-                                                    data-bs-dismiss="modal">
-                                                    <i class="bx bx-check"></i>
-                                                    <span>Ya, Tolak</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Selesai</button>
                             </div>
                         </div>
                     </section>
@@ -312,7 +312,17 @@
 <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
 <script src="assets/js/pages/dashboard.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
+<script>
+    const sign = document.querySelector("#sign");
+    const signaturePad = new SignaturePad(sign);
+    let signed = signaturePad.toDataURL();
+
+    const input = $('#input-sign');
+    input.val($signed);
+
+</script>
 </body>
 
 </html>
